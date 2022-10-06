@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:proyecto_dam1_pre_alfa/screens/dungeon_camaras_screen.dart';
 import 'package:proyecto_dam1_pre_alfa/screens/dungeon_forja_screen.dart';
 import 'package:proyecto_dam1_pre_alfa/screens/dungeon_foso_screen.dart';
+import 'package:proyecto_dam1_pre_alfa/screens/dungeon_prueba_screen.dart';
 
 
 class DungeonsScreen extends StatelessWidget {
@@ -10,11 +12,11 @@ class DungeonsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /*appBar: AppBar(
         backgroundColor: Colors.green,
         title: Text("Dungeons"),
         leading: Icon(Icons.list),
-      ),
+      ),*/
       body: ListView(
         children: [
             /*Divider(
@@ -22,11 +24,11 @@ class DungeonsScreen extends StatelessWidget {
             ),
             */
           ListTile(
-            leading: Icon(Icons.file_download, color: Colors.deepPurple
+            leading: Icon(MdiIcons.hexagonSlice6, color: Color(0xff20bc9c)
             ),
             trailing: Icon(Icons.keyboard_arrow_right),
             title: Text("Forja de almas"),
-            subtitle: Text("Progresion LvL 80"),
+            subtitle: Text("Progresion LvL 65-70"),
             onTap: (){
               _navegarTo(context, 'Forja');
             },
@@ -35,10 +37,10 @@ class DungeonsScreen extends StatelessWidget {
             thickness: 1.5,
           ),
           ListTile(
-            leading: Icon(Icons.settings, color: Colors.deepPurple),
+            leading: Icon(MdiIcons.circleSlice8, color: Color(0xff20bc9c)),
             trailing: Icon(Icons.keyboard_arrow_right),
             title: Text("Foso de Saron"),
-            subtitle: Text("Progresion LvL 80"),
+            subtitle: Text("Progresion LvL 70-75"),
             
             onTap: (){
               print("Printing project settings");
@@ -50,10 +52,10 @@ class DungeonsScreen extends StatelessWidget {
             thickness: 1.5,
           ),
           ListTile(
-            leading: Icon(Icons.people, color: Colors.deepPurple),
+            leading: Icon(MdiIcons.triangle, color: Color(0xff20bc9c)),
             trailing: Icon(Icons.keyboard_arrow_right),
             title: Text("Camaras de reflexion"),
-            subtitle: Text("Progresion LvL 80"),
+            subtitle: Text("Progresion LvL 75-80"),
             
             onTap: (){
               print("Printing project users");
@@ -64,6 +66,21 @@ class DungeonsScreen extends StatelessWidget {
           Divider(
             thickness: 1.5,
           ),
+          ListTile(
+            leading: Icon(MdiIcons.cube, color: Color(0xff20bc9c)),
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text("Prueba del Campeon"),
+            subtitle: Text("Progresion LvL 80+"),
+            
+            onTap: (){
+              print("Printing project users");
+              _navegarTo(context, 'campeon');
+            },
+            
+          ),
+          Divider(
+            thickness: 1.5,
+          )
         ],
       ),
 
@@ -83,8 +100,11 @@ class DungeonsScreen extends StatelessWidget {
         case 'Foso': 
           return FosoScreen();
 
-        default:
+        case 'camaras':
           return CamarasScreen(); 
+
+        default:
+          return PruebaScreen();
       }
     });
     Navigator.push(context, route);

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-class FosoScreen extends StatefulWidget {
-  FosoScreen({Key? key}) : super(key: key);
+class PruebaScreen extends StatefulWidget {
+  PruebaScreen({Key? key}) : super(key: key);
 
   @override
-  State<FosoScreen> createState() => _FosoScreenState();
+  State<PruebaScreen> createState() => _PruebaScreenState();
 
 }
 
 
-class _FosoScreenState extends State<FosoScreen> {
+class _PruebaScreenState extends State<PruebaScreen> {
   
   int _number=0;
   @override
@@ -19,18 +19,22 @@ class _FosoScreenState extends State<FosoScreen> {
       appBar: AppBar(
         backgroundColor: Colors.green,
         leading: Icon(MdiIcons.eye),
-        title: Text('Foso de Saron'),
+        title: Text('Prueba del campeon'),
       ),
       body: Column(
         children: [
           Container(
             padding: EdgeInsets.all(10),
-            child: Text('Foso de saron se encuentra en la poderosa ciudadela de Icecrown al igual que The Forge of Souls, siendo parte de la misión en cadena tiene dos entradas, una fuera de las tres mazmorras y otra al final de Forja de almas. '),
+            child: Text(
+              'La Prueba del Campeón es una mazmorra ubicada en Corona de Hielo en los terrenos de la Cruzada Argenta, una instancia que forma parte del evento del Torneo Argenta, a menudo llamado El Coliseo. La mazmorra es parte de la iniciativa de la Cruzada Argenta para encontrar a los campeones más poderosos en preparación para la lucha contra el Rey Exánime. '),
+
           ),
+          /*
           Container(
             padding: EdgeInsets.all(10),
-            child: Text('El Foso de Saron es literalmente una mina que alimenta la máquina de guerra del Rey Exánime, con prisioneros humanos y no muertos trabajando día y noche para satisfacer sus necesidades. '),
+            child: Text('The dungeon offers a perspective into how the Lich King torments souls and how he uses them to fuel the scourge war-machine, our adventurers will have to battle groups of undeads defending the forge, ultimately reaching its master, Bronjahm and destroying his craft. '),
           ),
+          */
           Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -44,22 +48,22 @@ class _FosoScreenState extends State<FosoScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(MdiIcons.axeBattle, color: Color.fromARGB(255, 202, 173, 43),),
-              Text(' Guerrero ', style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 170, 114, 31))),
+              Icon(MdiIcons.magicStaff, color: Color.fromARGB(255, 19, 190, 62),),
+              Text(' Druida ', style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 14, 145, 36))),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(MdiIcons.knife, color: Color.fromARGB(255, 164, 180, 17),),
-              Text('  Picaro ', style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 167, 179, 8))),
+              Icon(MdiIcons.sword, color: Color.fromARGB(255, 180, 17, 17),),
+              Text('  guerrero ', style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 179, 14, 8))),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(MdiIcons.magicStaff, color: Color.fromARGB(255, 23, 33, 168),),
-              Text('  Sacerdote ', style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 55, 23, 172))),
+              Icon(MdiIcons.magicStaff, color: Color.fromARGB(255, 68, 16, 209),),
+              Text('  chaman ', style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 69, 20, 204))),
             ],
           ),
           Column(children: [
@@ -76,16 +80,16 @@ class _FosoScreenState extends State<FosoScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 
-                Image(image: AssetImage('assets/Martillo.jpg')),
-                Image(image: AssetImage('assets/Daga.jpg')),
-                Image(image: AssetImage('assets/Botas.jpg')),
-                Image(image: AssetImage('assets/Rifle.jpg'))
+                Image(image: AssetImage('assets/Hacha.jpg')),
+                Image(image: AssetImage('assets/Cinturon.jpg')),
+                Image(image: AssetImage('assets/Abalorio.jpg')),
+                Image(image: AssetImage('assets/Perneras.jpg'))
               ],
             ),
           ),
           Container(
             child: 
-            Image(image: AssetImage('assets/Foso.jpg')),
+            Image(image: AssetImage('assets/Torneo.jpg')),
           ),
           OutlinedButton(
             child: Icon(MdiIcons.star),

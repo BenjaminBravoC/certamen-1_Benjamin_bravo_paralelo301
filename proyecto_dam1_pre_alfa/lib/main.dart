@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:proyecto_dam1_pre_alfa/screens/Inicio_screen.dart';
 //import 'package:proyecto_dam1_pre_alfa/screens/dungeon_foso_screen.dart';
-import 'package:proyecto_dam1_pre_alfa/screens/dungeons_screen.dart';
+//import 'package:proyecto_dam1_pre_alfa/screens/dungeons_screen.dart';
 
 
 void main() {
@@ -27,8 +28,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: DungeonsScreen(),
+      //home: DungeonsScreen(),
       //home: FosoScreen(),
+      home: InicioScreen(),
     );
   }
 }
